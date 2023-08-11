@@ -36,7 +36,8 @@ let tax = {
 const pay = 150302
 const city = "PalmBay"
 const Incomed = "Single"
-let incomeT = 0;
+let incomeT = 0
+let taxBrack
 for (i in tax.fl.IncomeBrack.Married) 
     if (pay - tax.fl.IncomeBrack.Married[i] >= 0) 
         if (i == 0) 
@@ -45,7 +46,9 @@ for (i in tax.fl.IncomeBrack.Married)
             incomeT += tax.fl.Income.Married[(tax.fl.IncomeBrack.Married[i]).toString()] * (tax.fl.IncomeBrack.Married[i] - tax.fl.IncomeBrack.Married[i - 1])
     else {
         incomeT += tax.fl.Income.Married[(tax.fl.IncomeBrack.Married[i]).toString()] * (pay - tax.fl.IncomeBrack.Married[i - 1])
+        taxBrack = Number(i) + 1
         break
     }
 console.log(incomeT + " = tax payed")
 console.log(pay - incomeT + " = after tax")
+console.log(taxBrack)
