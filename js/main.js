@@ -96,3 +96,4 @@ console.log(incomeT + " = tax payed")
 console.log(pay - incomeT + " = after tax")
 console.log(taxBrack)
 console.log("Sales tax = " + tax[state].Sale[city])
+document.getElementById("taxBrack").innerText = taxBrack;
