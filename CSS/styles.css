@@ -39,6 +39,14 @@ h1, h2, h3 {
     line-height: 1.1;
 }
 
+.cant_use_span_sadge {
+    color: var(--colorHeading);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-size: 4rem;
+
+}
+
 h1 {
     font-size: 7rem;
 }
@@ -907,4 +915,13 @@ a {
     .footer__heading {
         font-size: 1.6rem;
     }
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    color: black;
 }

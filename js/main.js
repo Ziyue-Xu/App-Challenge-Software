@@ -89,7 +89,7 @@ const city = "PalmBay"
 const Incomed = "Married"
 let incomeT = 0
 let taxBrack
-for (i in tax[state].IncomeBrack[Incomed]) 
+for (i in tax[state].IncomeBrack[Incomed]) {
     if (pay - tax[state].IncomeBrack[Incomed][i] >= 0) 
         if (i == 0) 
             incomeT += tax[state].Income[Incomed][(tax[state].IncomeBrack[Incomed][i]).toString()] * tax[state].IncomeBrack[Incomed][i]
@@ -100,5 +100,12 @@ for (i in tax[state].IncomeBrack[Incomed])
         taxBrack = Number(i) + 1
         break
     }
+}
+
+let namer = "boo";
+document.getElementById("namer").innerText = namer;
 document.getElementById("taxBrack").innerText = taxBrack;
-document.getElementById("name").innerText = "boo";
+document.getElementById("incomeT").innerText = incomeT.toFixed(2);
+document.getElementById("state").innerText = state.toUpperCase();
+document.getElementById("city").innerText = city;
+document.getElementById("incomed").innerText = Incomed;
