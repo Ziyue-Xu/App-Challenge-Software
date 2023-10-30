@@ -1,5 +1,13 @@
+//for css
+const collapsibles = document.querySelectorAll(".collapsible");
+collapsibles.forEach((item) =>
+    item.addEventListener("click", function() {
+        this.classList.toggle("collapsible--expanded");
+    })
+);
 
 
+//function
 let tax = {
     "fl" : {
         Sale: {"Jacksonvill": 0.075, "Miami": 0.075, "Tampa": 0.08, "Orlando": 0.065, "StPetersburg": 0.07, "Hialeah": 0.07, "PortStLucie": 0.07, 
@@ -92,8 +100,5 @@ for (i in tax[state].IncomeBrack[Incomed])
         taxBrack = Number(i) + 1
         break
     }
-console.log(incomeT + " = tax payed")
-console.log(pay - incomeT + " = after tax")
-console.log(taxBrack)
-console.log("Sales tax = " + tax[state].Sale[city])
 document.getElementById("taxBrack").innerText = taxBrack;
+document.getElementById("name").innerText = "boo";
