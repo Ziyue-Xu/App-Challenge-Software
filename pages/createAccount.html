@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Create Account</title>
-        <button type="button" ><a href="/index.html">Back to Home</a></button>
-        <p>
-            please enter in your infomation.
-        </p>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-      </head>
-      <body>
-        
-        <form action="/connect.php" method="post">
-            <label for="Fname"> First Name: </label><br>
-            <input type="text" id="Fname">
-            <label for="Lname"> First Name: </label><br>
-            <label for="age"> Age </label>
-            <input type="text">
-            <label for="Tax bracket">What is your yearly salary</label>
-            <input type="number" id="Tax bracket">
-            <label for="relationship status"> Are you single or married</label>
-            <input type="radio" id="relationship status"  value="single">
-            <input type="radio" id="relationship status" value="married"> 
-            <label for="mortgage" > how much do you pay each month for your mortgage </label>
-            <input type="number" id="mortgage"> 
-            <button type="submit"><a href="/index.html">Create Account</a></button>
-        </form>
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="nav__item" href="/index.html">Home</a>
+      <ul class="list nav__list">
+        <li class="nav__item"><a href="yourPage.html">Your Page</a></li>
+        <li class="nav__item">
+          <a href="createAccount.html">Create Account</a>
+        </li>
+      </ul>
+    </nav>
 
-</html>    
+    <form action="connect.php" method="post">
+      <label for="Fname"> First Name: </label><br />
+      <input type="text" id="Fname" />
+      <label for="Lname"> First Name: </label><br />
+      <label for="age"> Age </label>
+      <input type="text" />
+      <label for="Tax bracket">What is your yearly salary</label>
+      <input type="number" id="Tax bracket" />
+      <label for="relationship status"> Are you single or married</label>
+      <input type="radio" id="relationship status" value="single" />
+      <input type="radio" id="relationship status" value="married" />
+      <label for="mortgage">
+        how much do you pay each month for your mortgage
+      </label>
+      <input type="number" id="mortgage" />
+      <button type="submit" onclick="changeState();">
+        <a href="/index.html" onclick="changeState();">Create Account</a>
+      </button>
+    </form>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
