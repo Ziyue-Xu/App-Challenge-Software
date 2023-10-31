@@ -6,6 +6,14 @@ collapsibles.forEach((item) =>
     })
 );
 
+// to test
+function changeState() {
+    createAcct = '<a href="login.html">Login</a>';
+    document.getElementById("label_fiodjsf").innerHTML = createAcct;
+    console.log("in");
+}
+
+
 
 //function
 let tax = {
@@ -82,10 +90,10 @@ let tax = {
         }
     }
 }
-const pay = 150302
+const pay = 150000
 const state = "fl"
 const city = "PalmBay"
-const Incomed = "Married"
+const Incomed = "Single"
 let incomeT = 0
 let taxBrack
 for (i in tax[state].IncomeBrack[Incomed]) {
@@ -100,8 +108,8 @@ for (i in tax[state].IncomeBrack[Incomed]) {
         break
     }
 }
+let intial_amount = pay-incomeT; 
 
-let intial_amount = 2400
 var stage2
 
 
@@ -143,8 +151,7 @@ let emer_per = 100 * (emer / intial_amount)
 let emergancy_per = 100 * (emergancy/intial_amount)
 let misc_per = 100 * (misc/ intial_amount)
 
-let IncomeAT = pay-incomeT; 
-let namer = "in money i trust";
+let namer = "John";
 
 document.getElementById("gas").innerText = gas; 
 document.getElementById("electricity").innerText = elec;
@@ -170,12 +177,12 @@ document.getElementById('PercentSavings').innerText = emer_per
 document.getElementById('percentEntertainment').innerText = misc_per
 document.getElementById('percentEmer').innerText = emergancy_per
 /* -------------------------------------------------------------------------- */
-document.getElementById("namer").innerText = namer.toUpperCase();
+document.getElementById("namer").innerText = namer;
 document.getElementById("taxBrack").innerText = taxBrack;
 document.getElementById("incomeT").innerText = incomeT.toFixed(2);
 document.getElementById("state").innerText = state.toUpperCase();
 document.getElementById("city").innerText = city;
 document.getElementById("incomed").innerText = Incomed;
-document.getElementById("incomeAT").innerText = IncomeAT;
+document.getElementById("incomeAT").innerText = intial_amount;
 
 
