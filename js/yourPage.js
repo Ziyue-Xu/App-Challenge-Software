@@ -101,10 +101,75 @@ for (i in tax[state].IncomeBrack[Incomed]) {
     }
 }
 
+let intial_amount = 2400
+var stage2
+
+
+stage2 = intial_amount / 2
+
+let fifty = stage2
+stage2 = intial_amount / 10
+var stage3 = stage2 * 3
+
+let thirty = stage3
+
+let twenty = intial_amount / 5
+
+
+let gas = fifty/4
+let bills = fifty/4
+let water = bills/2
+let elec = bills/2
+let rent = fifty/2
+
+
+let Food = thirty/3
+let Internet = thirty/6
+let StreamingService = thirty/6
+let misc = thirty/12
+let emergancy = thirty/12
+let clothe = thirty/6
+let emer = twenty
+
+let Fper = 100 * (Food / intial_amount) 
+let clothe_per = 100 * (clothe / intial_amount) 
+let gas_per = 100 * (gas / intial_amount) 
+let water_per = 100 * (water / intial_amount) 
+let elec_per = 100 * (elec/ intial_amount) 
+let rent_per = 100 * (rent/ intial_amount) 
+let Internet_per = 100 * (Internet/intial_amount)  
+let StreamingService_per = 100 * (StreamingService/ intial_amount)  
+let emer_per = 100 * (emer / intial_amount)
+let emergancy_per = 100 * (emergancy/intial_amount)
+let misc_per = 100 * (misc/ intial_amount)
 
 let IncomeAT = pay-incomeT; 
-let namer = "in monek i trust";
+let namer = "in money i trust";
 
+document.getElementById("gas").innerText = gas; 
+document.getElementById("electricity").innerText = elec;
+document.getElementById("water").innerText = water;
+document.getElementById("Internet").innerText = Internet; 
+document.getElementById("StreamingService").innerText = StreamingService;
+document.getElementById("rent").innerText = rent;
+document.getElementById("Food").innerText = Food;
+document.getElementById("Clothe").innerText = clothe;
+document.getElementById("Savings").innerText = emer;
+document.getElementById("entertainment").innerText = misc;
+document.getElementById('Emergancy').innerText = emergancy
+document.getElementById("total").innerText = intial_amount;
+document.getElementById("percentgas").innerText = gas_per
+document.getElementById('percentElectricity').innerText = elec_per
+document.getElementById('percentWater').innerText = water_per
+document.getElementById('percentInternet').innerText = Internet_per
+document.getElementById('percentStreamingService').innerText = StreamingService_per
+document.getElementById("percentRent").innerText = rent_per
+document.getElementById("percentFood").innerText = Fper
+document.getElementById('percentClothe').innerText = clothe_per
+document.getElementById('PercentSavings').innerText = emer_per
+document.getElementById('percentEntertainment').innerText = misc_per
+document.getElementById('percentEmer').innerText = emergancy_per
+/* -------------------------------------------------------------------------- */
 document.getElementById("namer").innerText = namer.toUpperCase();
 document.getElementById("taxBrack").innerText = taxBrack;
 document.getElementById("incomeT").innerText = incomeT.toFixed(2);
@@ -112,3 +177,5 @@ document.getElementById("state").innerText = state.toUpperCase();
 document.getElementById("city").innerText = city;
 document.getElementById("incomed").innerText = Incomed;
 document.getElementById("incomeAT").innerText = IncomeAT;
+
+
